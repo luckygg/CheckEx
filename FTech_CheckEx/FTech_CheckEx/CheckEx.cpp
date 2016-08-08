@@ -218,8 +218,6 @@ void CCheckEx::DrawCheck(Graphics *pG)
 	int nStatus = GetCheck();
 	if (nStatus == 1)
 	{
-		Rect rcBox(5,5,rect.Height()-10,rect.Height()-10);
-
 		Pen pen(m_clrCheck,m_fSizeCheck);
 		//pen.SetLineJoin(LineJoinRound); //Round Style
 
