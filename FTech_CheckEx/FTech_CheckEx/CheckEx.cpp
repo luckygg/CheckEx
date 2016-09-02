@@ -2,7 +2,6 @@
 //
 
 #include "stdafx.h"
-#include "FTech_CheckEx.h"
 #include "CheckEx.h"
 
 
