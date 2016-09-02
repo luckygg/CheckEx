@@ -5,7 +5,7 @@
 //----------------------------------------------------------
 // Programmed by William Kim
 //----------------------------------------------------------
-// Last Update : 2016-09-02 14:10
+// Last Update : 2016-09-02 14:13
 //----------------------------------------------------------
 
 // CCheckEx
@@ -101,6 +101,7 @@ protected:
 public:
 	afx_msg BOOL OnEraseBkgnd(CDC* pDC);
 	afx_msg void OnPaint();
+	afx_msg void OnSize(UINT nType, int cx, int cy);
 };
 
 

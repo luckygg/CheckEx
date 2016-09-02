@@ -64,6 +64,7 @@ CCheckEx::~CCheckEx()
 BEGIN_MESSAGE_MAP(CCheckEx, CButton)
 	ON_WM_ERASEBKGND()
 	ON_WM_PAINT()
+	ON_WM_SIZE()
 END_MESSAGE_MAP()
 
 
@@ -492,4 +493,16 @@ void CCheckEx::SetSizeCheckBox(int nLeft, int nTop, int nWidth, int nHeight)
 	m_rcImage	 = m_rcCaption;
 	
 	Invalidate(); 
+}
+
+void CCheckEx::OnSize(UINT nType, int cx, int cy)
+{
+	CButton::OnSize(nType, cx, cy);
+
+	CRect rect;
+	GetClientRect(&rect);
+
+	m_rcCheckBox = Rect(rect.left, rect.top, rect.Height(), rect.Height());
+	m_rcCaption = Rect(rect.Height(), rect.top, rect.Width()-rect.Height(), rect.Height());
+	m_rcImage = m_rcCaption;
 }
