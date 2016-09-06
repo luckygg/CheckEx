@@ -5,7 +5,8 @@
 //----------------------------------------------------------
 // Programmed by William Kim
 //----------------------------------------------------------
-// Last Update : 2016-09-02 14:13
+// Last Update : 2016-09-06 17:00
+// Modified by William Kim
 //----------------------------------------------------------
 
 // CCheckEx
@@ -43,6 +44,12 @@ public :
 	void SetColorBoxBorder	(int nA, int nR, int nG, int nB) { m_clrBoxBorder	= Color(nA, nR, nG, nB); Invalidate(); }
 	void SetColorCheck		(int nA, int nR, int nG, int nB) { m_clrCheck		= Color(nA, nR, nG, nB); Invalidate(); }
 	void SetColorText		(int nA, int nR, int nG, int nB) { m_clrText		= Color(nA, nR, nG, nB); Invalidate(); }
+	void SetColorBkg		(int nA, COLORREF clrColor);
+	void SetColorBorder		(int nA, COLORREF clrColor);
+	void SetColorBoxBkg		(int nA, COLORREF clrColor);
+	void SetColorBoxBorder	(int nA, COLORREF clrColor);
+	void SetColorCheck		(int nA, COLORREF clrColor);
+	void SetColorText		(int nA, COLORREF clrColor);
 
 	//----- Set Text Alignment -----//
 	void SetAlignTextLT() { m_nTextAlign1 = 0; m_nTextAlign2 = 0; Invalidate(); }

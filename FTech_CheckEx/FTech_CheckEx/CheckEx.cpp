@@ -506,3 +506,58 @@ void CCheckEx::OnSize(UINT nType, int cx, int cy)
 	m_rcCaption = Rect(rect.Height(), rect.top, rect.Width()-rect.Height(), rect.Height());
 	m_rcImage = m_rcCaption;
 }
+
+void CCheckEx::SetColorBkg(int nA, COLORREF clrColor)
+{
+	int r = GetRValue(clrColor);
+	int g = GetGValue(clrColor);
+	int b = GetBValue(clrColor);
+
+	m_clrBkg = Color(nA, r, g, b); 
+	Invalidate();
+}
+void CCheckEx::SetColorBorder(int nA, COLORREF clrColor)
+{
+	int r = GetRValue(clrColor);
+	int g = GetGValue(clrColor);
+	int b = GetBValue(clrColor);
+
+	m_clrBorder = Color(nA, r, g, b); 
+	Invalidate();
+}
+void CCheckEx::SetColorBoxBkg(int nA, COLORREF clrColor)
+{
+	int r = GetRValue(clrColor);
+	int g = GetGValue(clrColor);
+	int b = GetBValue(clrColor);
+
+	m_clrBoxBkg = Color(nA, r, g, b); 
+	Invalidate();
+}
+void CCheckEx::SetColorBoxBorder(int nA, COLORREF clrColor)
+{
+	int r = GetRValue(clrColor);
+	int g = GetGValue(clrColor);
+	int b = GetBValue(clrColor);
+
+	m_clrBoxBorder = Color(nA, r, g, b); 
+	Invalidate();
+}
+void CCheckEx::SetColorCheck(int nA, COLORREF clrColor)
+{
+	int r = GetRValue(clrColor);
+	int g = GetGValue(clrColor);
+	int b = GetBValue(clrColor);
+
+	m_clrCheck = Color(nA, r, g, b); 
+	Invalidate();
+}
+void CCheckEx::SetColorText(int nA, COLORREF clrColor)
+{
+	int r = GetRValue(clrColor);
+	int g = GetGValue(clrColor);
+	int b = GetBValue(clrColor);
+
+	m_clrText = Color(nA, r, g, b); 
+	Invalidate();
+}
